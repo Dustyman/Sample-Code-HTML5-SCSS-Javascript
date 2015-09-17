@@ -2,6 +2,8 @@
   margin: 50px auto;
   width: 98%;
   max-width: 1015px;
+  overflow-x: hidden;
+
 
   @include bp(tablet) {
     width: 94%;
