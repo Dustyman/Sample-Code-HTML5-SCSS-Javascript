@@ -1,3 +1,4 @@
+//http://sass-lang.com/guide good SASS reference
 @import 'compass/css3';
 @import 'reset';
 
@@ -38,9 +39,35 @@ $faq-background: #eeeeee;
 }
 
 @mixin box-shadow($top, $left, $blur, $spread, $color) {
-  -moz-box-shadow:    $top $left $blur $spread $color;
+  -moz-box-shadow: $top $left $blur $spread $color;
   -webkit-box-shadow: $top $left $blur $spread $color;
-  box-shadow:         $top $left $blur $spread $color;
+  box-shadow: $top $left $blur $spread $color;
+}
+
+@mixin gradient($pos, $startColor, $endColor) {
+  background-image: -webkit-linear-gradient($pos, $startColor, $endColor);
+  background-image: -moz-linear-gradient($pos, $startColor, $endColor);
+  background-image: -ms-linear-gradient($pos, $startColor, $endColor);
+  background-image: -o-linear-gradient($pos, $startColor, $endColor);
+}
+
+@mixin box-sizing($border-style) {
+  -webkit-box-sizing: $border-style;
+  -moz-box-sizing: $border-style;
+  box-sizing: $border-style;
+}
+
+@mixin transform-rotate($degree) {
+  -ms-transform: rotate($degree);
+  -webkit-transform: rotate($degree);
+  transform: rotate($degree);
+}
+
+@mixin transition($type, $duration, $easing) {
+  -moz-transition: $type $duration $easing;
+  -ms-transition: $type $duration $easing;
+  -o-transition: $type $duration $easing;
+  -webkit-transition: $type $duration $easing;
 }
 
 %clearfix {
@@ -62,6 +89,7 @@ $faq-background: #eeeeee;
     @media (max-width: 1056px) { @content; }
   }
 
+  //I added this one to help with the width of the text on the FAQ section
   @else if $point == betweentp {
     @media (max-width: 870px) { @content; }
   }
@@ -113,13 +141,10 @@ figcaption, .hero-sub-head {
   color: $white;
 }
 
+// http://www.bestcssbuttongenerator.com/ great button generator
 button {
   background: $button-grad1;
-  background-image: -webkit-linear-gradient(top, $button-grad1, $button-grad2);
-  background-image: -moz-linear-gradient(top, $button-grad1, $button-grad2);
-  background-image: -ms-linear-gradient(top, $button-grad1, $button-grad2);
-  background-image: -o-linear-gradient(top, $button-grad1, $button-grad2);
-  background-image: linear-gradient(to bottom, $button-grad1, $button-grad2);
+  @include gradient(top, $button-grad1, $button-grad2);
   @include border-radius(4px);
   font-family: $helvetica;
   color: $white;
@@ -135,11 +160,7 @@ button {
 
   &:hover {
     background: $button-hover1;
-    background-image: -webkit-linear-gradient(top, $button-hover1, $button-hover2);
-    background-image: -moz-linear-gradient(top, $button-hover1, $button-hover2);
-    background-image: -ms-linear-gradient(top, $button-hover1, $button-hover2);
-    background-image: -o-linear-gradient(top, $button-hover1, $button-hover2);
-    background-image: linear-gradient(to bottom, $button-hover1, $button-hover2);
+    @include gradient(top, $button-hover1, $button-hover2);
     text-decoration: none;
   }
 }
@@ -302,6 +323,7 @@ button {
     }
   }
 
+  // https://css-tricks.com/full-browser-width-bars/ Trick to get a bar across the screen
   #mid-section {
     @extend %clearfix;
     float: left;
@@ -468,42 +490,35 @@ button {
           width: 99.5%;
         }
 
-        img { max-width: 100%; height: auto; vertical-align: bottom; border: 10px solid #fff; border-radius: 3px;
-          -webkit-box-sizing: border-box;
-          -moz-box-sizing: border-box;
-          box-sizing: border-box;
-          -webkit-box-shadow: 0px 0px 11px 0px rgba(0, 0, 0, 0.4);
-          -moz-box-shadow: 0px 0px 11px 0px rgba(0, 0, 0, 0.4);
-          box-shadow: 0px 0px 11px 0px rgba(0, 0, 0, 0.4);
-          -ms-transform: rotate(4deg); /* IE 9 */
-          -webkit-transform: rotate(4deg); /* Chrome, Safari, Opera */
-          transform: rotate(4deg);
+        img {
+          max-width: 100%;
+          height: auto;
+          vertical-align: bottom;
+          border: 10px solid #fff;
+          border-radius: 3px;
+          @include box-sizing(border-box);
+          @include box-shadow(0px, 0px, 11px, 0px, rgba(0, 0, 0, 0.4));
+          @include transform-rotate(4deg);
 
           @include bp(tablet) {
             @include box-shadow(0, 0, 0, 4px, $white);
             width: 100%;
-            -webkit-box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0);
-            -moz-box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0);
-            box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0);
-            -ms-transform: rotate(0deg); /* IE 9 */
-            -webkit-transform: rotate(0deg); /* Chrome, Safari, Opera */
-            transform: rotate(0deg);
+            @include box-shadow(0px, 0px, 0px, 0px, rgba(0, 0, 0, 0));
+            @include transform-rotate(0deg);
           }
         }
 
-        &:before { content: ""; border-radius: 3px; width: 100%; height: 100%; position: absolute; border: 10px solid #fff; left: 0;
-          -webkit-box-sizing: border-box;
-          -moz-box-sizing: border-box;
-          box-sizing: border-box;
-          -webkit-box-shadow: 0px 0px 11px 0px rgba(0, 0, 0, 0.4);
-          -moz-box-shadow: 0px 0px 11px 0px rgba(0, 0, 0, 0.4);
-          box-shadow: 0px 0px 11px 0px rgba(0, 0, 0, 0.4);
-          -webkit-transition: 0.3s all ease-out;
-          -moz-transition: 0.3s all ease-out;
-          transition: 0.3s all ease-out;
-          -ms-transform: rotate(-4deg); /* IE 9 */
-          -webkit-transform: rotate(-4deg); /* Chrome, Safari, Opera */
-          transform: rotate(-4deg);
+        &:before {
+          content: "";
+          border-radius: 3px;
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          border: 10px solid #fff;
+          left: 0;
+          @include box-sizing(border-box);
+          @include box-shadow(0px, 0px, 11px, 0px, rgba(0, 0, 0, 0.4));
+          @include transform-rotate(-4deg);
 
           @include bp(tablet) {
             content: none;
@@ -612,10 +627,7 @@ button {
         overflow: hidden;
         height: 20px;
 
-        -moz-transition: all 1s ease-in-out;
-        -ms-transition: all 1s ease-in-out;
-        -o-transition: all 1s ease-in-out;
-        -webkit-transition: all 1s ease-in-out;
+        @include transition(all, 1s, ease-in-out);
         transition: all .3s;
 
         h4 {
@@ -629,25 +641,18 @@ button {
           padding-right: 15px;
           @include opacity(0.4);
 
-          -moz-transition: all 1s ease-in-out;
-          -ms-transition: all 1s ease-in-out;
-          -o-transition: all 1s ease-in-out;
-          -webkit-transition: all 1s ease-in-out;
+          @include transition(all, 1s, ease-in-out);
           transition: all .3s;          
         }
 
         .faq-arrow.rotate0 {
-          -ms-transform: rotate(0deg); /* IE 9 */
-          -webkit-transform: rotate(0deg); /* Safari */
-          transform: rotate(0deg);
+          @include transform-rotate(0deg);
         }
 
         .faq-arrow.rotate90 {
           padding-right: 20px;
           padding-top: 20px;
-          -ms-transform: rotate(90deg); /* IE 9 */
-          -webkit-transform: rotate(90deg); /* Safari */
-          transform: rotate(90deg);
+          @include transform-rotate(90deg);
         }
 
         p {
@@ -661,29 +666,15 @@ button {
       }
 
       .expanded {
-        -moz-transition: all 1s ease-in-out;
-        -ms-transition: all 1s ease-in-out;
-        -o-transition: all 1s ease-in-out;
-        -webkit-transition: all 1s ease-in-out;
+        @include transition(all, 1s, ease-in-out);
         transition: all .3s;
       }
     }
 
     #expander3 {
       @include bp(betweentp) {
-        height: 35px;
+        height: 40px;
       }
-      // h4 {
-      //   margin: 10px 0;
-
-      //   @include bp(betweentp) {
-      //     margin: 0 0;
-      //   }
-      // }
-
-      // .arrow {
-      //   margin-top: 10px;
-      // }
     }
   }
 
