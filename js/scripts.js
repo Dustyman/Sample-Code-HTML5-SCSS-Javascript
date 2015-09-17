@@ -8,10 +8,22 @@ function setup() {
   $(".expand").click(function() {
     if($(this).hasClass("expanded")) {
       //hides paragraph content
+      console.log("height "+$(this).find("h4").height());
       $(this).toggleClass("expanded");
       if($(this).find("h4").height() > 20) {
-        $(this).css("height",40);
+        if($(this).find("h4").height() > 32) {
+          $(this).css("height",35);
+        }else {
+          $(this).css("height",20);
+        }
       }else {
+        if($(this).find("h4").height() === 16) {
+          $(this).css("height",10);
+        }else {
+          $(this).css("height",20);
+        }
+      }
+      if($(this).find("h4").height() === 46) {
         $(this).css("height",20);
       }
       //rotates arrow back to original position

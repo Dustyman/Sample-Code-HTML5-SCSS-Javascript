@@ -157,11 +157,23 @@ button:hover {
   width: 98%;
   max-width: 1015px;
 }
-/* line 7, ../compass/sass/_styles.scss */
+@media (max-width: 1056px) {
+  /* line 1, ../compass/sass/_styles.scss */
+  #main {
+    width: 94%;
+  }
+}
+@media (max-width: 400px) {
+  /* line 10, ../compass/sass/_styles.scss */
+  #main header h1 {
+    font-size: 40px;
+  }
+}
+/* line 17, ../compass/sass/_styles.scss */
 #main #top-section figure img {
   width: 100%;
 }
-/* line 11, ../compass/sass/_styles.scss */
+/* line 21, ../compass/sass/_styles.scss */
 #main #top-section .hero-caption {
   font-family: Georgia, serif;
   color: #ffffff;
@@ -169,41 +181,47 @@ button:hover {
   text-shadow: 0px 0px 5px #000000;
 }
 @media (max-width: 1056px) {
-  /* line 11, ../compass/sass/_styles.scss */
+  /* line 21, ../compass/sass/_styles.scss */
   #main #top-section .hero-caption {
     font-size: 28px;
   }
 }
 @media (max-width: 600px) {
-  /* line 11, ../compass/sass/_styles.scss */
+  /* line 21, ../compass/sass/_styles.scss */
   #main #top-section .hero-caption {
     font-size: 22px;
   }
 }
-/* line 26, ../compass/sass/_styles.scss */
+/* line 36, ../compass/sass/_styles.scss */
 #main #top-section .hero-sub-head {
   font-size: 16px;
   margin: 15px 0 35px 0;
   text-shadow: 0px 0px 5px #000000;
 }
 @media (max-width: 1056px) {
-  /* line 26, ../compass/sass/_styles.scss */
+  /* line 36, ../compass/sass/_styles.scss */
   #main #top-section .hero-sub-head {
     font-size: 15px;
   }
 }
 @media (max-width: 600px) {
-  /* line 26, ../compass/sass/_styles.scss */
+  /* line 36, ../compass/sass/_styles.scss */
   #main #top-section .hero-sub-head {
     font-size: 12px;
     margin: 15px 0 16px 0;
   }
 }
-/* line 42, ../compass/sass/_styles.scss */
+@media (max-width: 400px) {
+  /* line 36, ../compass/sass/_styles.scss */
+  #main #top-section .hero-sub-head {
+    margin: 7px 0 9px 0;
+  }
+}
+/* line 56, ../compass/sass/_styles.scss */
 #main .hero-image {
   margin: 0;
 }
-/* line 46, ../compass/sass/_styles.scss */
+/* line 60, ../compass/sass/_styles.scss */
 #main .hero-text {
   position: absolute;
   top: 250px;
@@ -211,7 +229,7 @@ button:hover {
   max-width: 332px;
 }
 @media (max-width: 1056px) {
-  /* line 46, ../compass/sass/_styles.scss */
+  /* line 60, ../compass/sass/_styles.scss */
   #main .hero-text {
     top: 200px;
     padding-left: 50px;
@@ -219,24 +237,24 @@ button:hover {
   }
 }
 @media (max-width: 600px) {
-  /* line 46, ../compass/sass/_styles.scss */
+  /* line 60, ../compass/sass/_styles.scss */
   #main .hero-text {
     top: 170px;
     padding-left: 25px;
     max-width: 200px;
   }
 }
-/* line 65, ../compass/sass/_styles.scss */
+/* line 79, ../compass/sass/_styles.scss */
 #main nav {
   height: 140px;
 }
 @media (max-width: 1056px) {
-  /* line 65, ../compass/sass/_styles.scss */
+  /* line 79, ../compass/sass/_styles.scss */
   #main nav {
     width: 100%;
   }
 }
-/* line 72, ../compass/sass/_styles.scss */
+/* line 86, ../compass/sass/_styles.scss */
 #main nav ul li a {
   float: left;
   font-size: 16px;
@@ -246,25 +264,25 @@ button:hover {
   height: 60px;
 }
 @media (max-width: 1056px) {
-  /* line 72, ../compass/sass/_styles.scss */
+  /* line 86, ../compass/sass/_styles.scss */
   #main nav ul li a {
     width: 49%;
     margin: 20px 2% 20px 0;
   }
 }
 @media (max-width: 600px) {
-  /* line 72, ../compass/sass/_styles.scss */
+  /* line 86, ../compass/sass/_styles.scss */
   #main nav ul li a {
     width: 100%;
   }
 }
-/* line 89, ../compass/sass/_styles.scss */
+/* line 103, ../compass/sass/_styles.scss */
 #main nav ul li a span {
   float: left;
   width: 104px;
   margin: 15px 20px 0 20px;
 }
-/* line 95, ../compass/sass/_styles.scss */
+/* line 109, ../compass/sass/_styles.scss */
 #main nav ul li a img {
   width: 62px;
   color: #5a5a5a;
@@ -273,102 +291,102 @@ button:hover {
   margin-left: 15px;
   float: left;
 }
-/* line 103, ../compass/sass/_styles.scss */
+/* line 117, ../compass/sass/_styles.scss */
 #main nav ul li a .right-arrow {
   width: 12px;
   margin: 25px 15px 0 0;
 }
 @media (max-width: 1056px) {
-  /* line 103, ../compass/sass/_styles.scss */
+  /* line 117, ../compass/sass/_styles.scss */
   #main nav ul li a .right-arrow {
     float: right;
   }
 }
 @media (max-width: 1056px) {
-  /* line 113, ../compass/sass/_styles.scss */
+  /* line 127, ../compass/sass/_styles.scss */
   #main nav .enjoy-nature {
     float: right;
     margin-right: 0;
   }
 }
 @media (max-width: 600px) {
-  /* line 113, ../compass/sass/_styles.scss */
+  /* line 127, ../compass/sass/_styles.scss */
   #main nav .enjoy-nature {
     margin-top: 0;
   }
 }
-/* line 123, ../compass/sass/_styles.scss */
+/* line 137, ../compass/sass/_styles.scss */
 #main nav .enjoy-nature .icon {
   width: 52px;
   margin-top: 4px;
 }
-/* line 128, ../compass/sass/_styles.scss */
+/* line 142, ../compass/sass/_styles.scss */
 #main nav .enjoy-nature span {
   margin-top: 23px;
 }
 @media (max-width: 1056px) {
-  /* line 133, ../compass/sass/_styles.scss */
+  /* line 147, ../compass/sass/_styles.scss */
   #main nav .share-photos {
     margin-top: 0;
   }
 }
-/* line 138, ../compass/sass/_styles.scss */
+/* line 152, ../compass/sass/_styles.scss */
 #main nav .share-photos .icon {
   width: 48px;
   margin-top: 7px;
 }
-/* line 144, ../compass/sass/_styles.scss */
+/* line 158, ../compass/sass/_styles.scss */
 #main nav .find-a-temple {
   margin-right: 0;
   float: right;
 }
 @media (max-width: 1056px) {
-  /* line 144, ../compass/sass/_styles.scss */
+  /* line 158, ../compass/sass/_styles.scss */
   #main nav .find-a-temple {
     margin-top: 0;
   }
 }
-/* line 152, ../compass/sass/_styles.scss */
+/* line 166, ../compass/sass/_styles.scss */
 #main nav .find-a-temple .icon {
   width: 48px;
   margin-top: 6px;
 }
-/* line 159, ../compass/sass/_styles.scss */
+/* line 173, ../compass/sass/_styles.scss */
 #main #mid-section {
   float: left;
   margin: 0 -9999px;
   padding: 0.25px 9999px;
   background-color: #f5f2ea;
 }
-/* line 166, ../compass/sass/_styles.scss */
+/* line 180, ../compass/sass/_styles.scss */
 #main #mid-section h3 {
   margin: 4px 0 17px 0;
 }
-/* line 170, ../compass/sass/_styles.scss */
+/* line 184, ../compass/sass/_styles.scss */
 #main #mid-section p {
   line-height: 1.4;
   margin-bottom: 50px;
 }
 @media (max-width: 1056px) {
-  /* line 170, ../compass/sass/_styles.scss */
+  /* line 184, ../compass/sass/_styles.scss */
   #main #mid-section p {
     margin-bottom: 22px;
   }
 }
 @media (max-width: 1056px) {
-  /* line 179, ../compass/sass/_styles.scss */
+  /* line 193, ../compass/sass/_styles.scss */
   #main #mid-section button {
     width: 170px;
   }
 }
 @media (max-width: 600px) {
-  /* line 179, ../compass/sass/_styles.scss */
+  /* line 193, ../compass/sass/_styles.scss */
   #main #mid-section button {
     width: 48%;
     margin-top: 23px;
   }
 }
-/* line 190, ../compass/sass/_styles.scss */
+/* line 204, ../compass/sass/_styles.scss */
 #main #mid-section .article1 {
   margin-top: 30px;
   float: left;
@@ -376,7 +394,7 @@ button:hover {
   margin-right: 4%;
 }
 @media (max-width: 1056px) {
-  /* line 190, ../compass/sass/_styles.scss */
+  /* line 204, ../compass/sass/_styles.scss */
   #main #mid-section .article1 {
     width: 100%;
     margin-right: 0;
@@ -384,20 +402,20 @@ button:hover {
   }
 }
 @media (max-width: 1056px) {
-  /* line 204, ../compass/sass/_styles.scss */
+  /* line 218, ../compass/sass/_styles.scss */
   #main #mid-section .article1 .text {
     float: left;
     width: 64%;
   }
 }
 @media (max-width: 600px) {
-  /* line 204, ../compass/sass/_styles.scss */
+  /* line 218, ../compass/sass/_styles.scss */
   #main #mid-section .article1 .text {
     width: 100%;
   }
 }
 @media (max-width: 1056px) {
-  /* line 215, ../compass/sass/_styles.scss */
+  /* line 229, ../compass/sass/_styles.scss */
   #main #mid-section .article1 .visuals {
     float: right;
     width: 23%;
@@ -405,13 +423,13 @@ button:hover {
   }
 }
 @media (max-width: 600px) {
-  /* line 215, ../compass/sass/_styles.scss */
+  /* line 229, ../compass/sass/_styles.scss */
   #main #mid-section .article1 .visuals {
     float: none;
     width: 100%;
   }
 }
-/* line 229, ../compass/sass/_styles.scss */
+/* line 243, ../compass/sass/_styles.scss */
 #main #mid-section .art-img {
   margin-top: 30px;
   float: right;
@@ -420,14 +438,20 @@ button:hover {
   box-shadow: 2px 1px 5px 1px #5a5a5a;
 }
 @media (max-width: 1056px) {
-  /* line 229, ../compass/sass/_styles.scss */
+  /* line 243, ../compass/sass/_styles.scss */
   #main #mid-section .art-img {
     float: none;
     width: 99.5%;
     margin-top: 0;
   }
 }
-/* line 240, ../compass/sass/_styles.scss */
+@media (max-width: 400px) {
+  /* line 243, ../compass/sass/_styles.scss */
+  #main #mid-section .art-img {
+    width: 99%;
+  }
+}
+/* line 258, ../compass/sass/_styles.scss */
 #main #mid-section .art-img img {
   margin: 4px 0 0 4px;
   -moz-box-shadow: 0 0 0 4px #ffffff;
@@ -435,12 +459,18 @@ button:hover {
   box-shadow: 0 0 0 4px #ffffff;
 }
 @media (max-width: 1056px) {
-  /* line 240, ../compass/sass/_styles.scss */
+  /* line 258, ../compass/sass/_styles.scss */
   #main #mid-section .art-img img {
     width: 99.5%;
   }
 }
-/* line 250, ../compass/sass/_styles.scss */
+@media (max-width: 400px) {
+  /* line 258, ../compass/sass/_styles.scss */
+  #main #mid-section .art-img img {
+    width: 99%;
+  }
+}
+/* line 272, ../compass/sass/_styles.scss */
 #main #mid-section .thumb {
   background: url("../images/thumb1.jpg") no-repeat center top;
   width: 170px;
@@ -449,12 +479,18 @@ button:hover {
   margin: 0 20px 100px 0;
 }
 @media (max-width: 1056px) {
-  /* line 250, ../compass/sass/_styles.scss */
+  /* line 272, ../compass/sass/_styles.scss */
   #main #mid-section .thumb {
     margin: 0 20px 30px 0;
   }
 }
-/* line 261, ../compass/sass/_styles.scss */
+@media (max-width: 400px) {
+  /* line 272, ../compass/sass/_styles.scss */
+  #main #mid-section .thumb {
+    width: 135px;
+  }
+}
+/* line 287, ../compass/sass/_styles.scss */
 #main #mid-section .thumb img {
   opacity: 0.6;
   filter: alpha(opacity=60);
@@ -465,21 +501,33 @@ button:hover {
   top: 25px;
   left: 67px;
 }
-/* line 272, ../compass/sass/_styles.scss */
+@media (max-width: 400px) {
+  /* line 287, ../compass/sass/_styles.scss */
+  #main #mid-section .thumb img {
+    left: 45px;
+  }
+}
+/* line 302, ../compass/sass/_styles.scss */
 #main #mid-section button {
   float: left;
 }
-/* line 276, ../compass/sass/_styles.scss */
+@media (max-width: 400px) {
+  /* line 302, ../compass/sass/_styles.scss */
+  #main #mid-section button {
+    margin-top: 17px;
+  }
+}
+/* line 310, ../compass/sass/_styles.scss */
 #main #mid-section .art2 {
   float: left;
 }
-/* line 280, ../compass/sass/_styles.scss */
+/* line 314, ../compass/sass/_styles.scss */
 #main #mid-section .art2 .article2 {
   float: right;
   width: 52%;
 }
 @media (max-width: 1056px) {
-  /* line 280, ../compass/sass/_styles.scss */
+  /* line 314, ../compass/sass/_styles.scss */
   #main #mid-section .art2 .article2 {
     float: none;
     width: 99.5%;
@@ -487,20 +535,20 @@ button:hover {
   }
 }
 @media (max-width: 1056px) {
-  /* line 290, ../compass/sass/_styles.scss */
+  /* line 324, ../compass/sass/_styles.scss */
   #main #mid-section .art2 .article2 .text {
     float: left;
     width: 64%;
   }
 }
 @media (max-width: 600px) {
-  /* line 290, ../compass/sass/_styles.scss */
+  /* line 324, ../compass/sass/_styles.scss */
   #main #mid-section .art2 .article2 .text {
     width: 100%;
   }
 }
 @media (max-width: 1056px) {
-  /* line 301, ../compass/sass/_styles.scss */
+  /* line 335, ../compass/sass/_styles.scss */
   #main #mid-section .art2 .article2 .visuals {
     float: right;
     width: 23%;
@@ -508,13 +556,13 @@ button:hover {
   }
 }
 @media (max-width: 600px) {
-  /* line 301, ../compass/sass/_styles.scss */
+  /* line 335, ../compass/sass/_styles.scss */
   #main #mid-section .art2 .article2 .visuals {
     float: none;
     width: 100%;
   }
 }
-/* line 315, ../compass/sass/_styles.scss */
+/* line 349, ../compass/sass/_styles.scss */
 #main #mid-section .art2 .stack {
   float: left;
   position: relative;
@@ -522,12 +570,12 @@ button:hover {
   margin-top: 20px;
 }
 @media (max-width: 1056px) {
-  /* line 315, ../compass/sass/_styles.scss */
+  /* line 349, ../compass/sass/_styles.scss */
   #main #mid-section .art2 .stack {
     width: 99.5%;
   }
 }
-/* line 325, ../compass/sass/_styles.scss */
+/* line 359, ../compass/sass/_styles.scss */
 #main #mid-section .art2 .stack img {
   max-width: 100%;
   height: auto;
@@ -545,7 +593,7 @@ button:hover {
   transform: rotate(4deg);
 }
 @media (max-width: 1056px) {
-  /* line 325, ../compass/sass/_styles.scss */
+  /* line 359, ../compass/sass/_styles.scss */
   #main #mid-section .art2 .stack img {
     -moz-box-shadow: 0 0 0 4px #ffffff;
     -webkit-box-shadow: 0 0 0 4px #ffffff;
@@ -559,7 +607,7 @@ button:hover {
     transform: rotate(0deg);
   }
 }
-/* line 343, ../compass/sass/_styles.scss */
+/* line 377, ../compass/sass/_styles.scss */
 #main #mid-section .art2 .stack:before {
   content: "";
   border-radius: 3px;
@@ -579,92 +627,92 @@ button:hover {
   transform: rotate(-4deg);
 }
 @media (max-width: 1056px) {
-  /* line 343, ../compass/sass/_styles.scss */
+  /* line 377, ../compass/sass/_styles.scss */
   #main #mid-section .art2 .stack:before {
     content: none;
   }
 }
-/* line 360, ../compass/sass/_styles.scss */
+/* line 394, ../compass/sass/_styles.scss */
 #main #mid-section .art2 .stack:before {
   top: 4px;
   z-index: -10;
 }
 @media (max-width: 1056px) {
-  /* line 360, ../compass/sass/_styles.scss */
+  /* line 394, ../compass/sass/_styles.scss */
   #main #mid-section .art2 .stack:before {
     content: none;
   }
 }
-/* line 369, ../compass/sass/_styles.scss */
+/* line 403, ../compass/sass/_styles.scss */
 #main #mid-section .art2 .thumb {
   background: url("../images/thumb2.jpg") no-repeat center top;
   position: relative;
   left: 13.5%;
 }
 @media (max-width: 1056px) {
-  /* line 369, ../compass/sass/_styles.scss */
+  /* line 403, ../compass/sass/_styles.scss */
   #main #mid-section .art2 .thumb {
     position: inherit;
     left: 0;
   }
 }
-/* line 380, ../compass/sass/_styles.scss */
+/* line 414, ../compass/sass/_styles.scss */
 #main #mid-section .art2 button {
   position: relative;
   left: 13.5%;
 }
 @media (max-width: 1056px) {
-  /* line 380, ../compass/sass/_styles.scss */
+  /* line 414, ../compass/sass/_styles.scss */
   #main #mid-section .art2 button {
     position: inherit;
     left: 0;
   }
 }
-/* line 391, ../compass/sass/_styles.scss */
+/* line 425, ../compass/sass/_styles.scss */
 #main #mid-section .art3 {
   float: left;
 }
 @media (max-width: 1056px) {
-  /* line 391, ../compass/sass/_styles.scss */
+  /* line 425, ../compass/sass/_styles.scss */
   #main #mid-section .art3 {
     margin-bottom: 20px;
   }
 }
 @media (max-width: 1056px) {
-  /* line 398, ../compass/sass/_styles.scss */
+  /* line 432, ../compass/sass/_styles.scss */
   #main #mid-section .art3 .art-img {
     float: left;
     width: 99.5%;
     margin-top: 0;
   }
 }
-/* line 406, ../compass/sass/_styles.scss */
+/* line 440, ../compass/sass/_styles.scss */
 #main #mid-section .art3 .article3 {
   width: 52%;
   float: left;
 }
 @media (max-width: 1056px) {
-  /* line 406, ../compass/sass/_styles.scss */
+  /* line 440, ../compass/sass/_styles.scss */
   #main #mid-section .art3 .article3 {
     width: 99.5%;
     margin-top: 30px;
   }
 }
 @media (max-width: 1056px) {
-  /* line 415, ../compass/sass/_styles.scss */
+  /* line 449, ../compass/sass/_styles.scss */
   #main #mid-section .art3 .article3 .text {
     float: left;
     width: 64%;
   }
 }
 @media (max-width: 600px) {
-  /* line 415, ../compass/sass/_styles.scss */
+  /* line 449, ../compass/sass/_styles.scss */
   #main #mid-section .art3 .article3 .text {
     width: 100%;
   }
 }
 @media (max-width: 1056px) {
-  /* line 426, ../compass/sass/_styles.scss */
+  /* line 460, ../compass/sass/_styles.scss */
   #main #mid-section .art3 .article3 .visuals {
     float: right;
     width: 23%;
@@ -672,23 +720,23 @@ button:hover {
   }
 }
 @media (max-width: 600px) {
-  /* line 426, ../compass/sass/_styles.scss */
+  /* line 460, ../compass/sass/_styles.scss */
   #main #mid-section .art3 .article3 .visuals {
     float: none;
     width: 100%;
   }
 }
-/* line 440, ../compass/sass/_styles.scss */
+/* line 474, ../compass/sass/_styles.scss */
 #main #mid-section .art3 .thumb {
   background: url("../images/thumb3.jpg") no-repeat center top;
 }
-/* line 446, ../compass/sass/_styles.scss */
+/* line 480, ../compass/sass/_styles.scss */
 #main #mid-section-2 {
   float: left;
   margin-top: 30px;
   margin-bottom: 45px;
 }
-/* line 454, ../compass/sass/_styles.scss */
+/* line 488, ../compass/sass/_styles.scss */
 #main #mid-section-2 ul .expand {
   cursor: pointer;
   margin-top: 15px;
@@ -701,12 +749,19 @@ button:hover {
   -o-transition: all 0.3s ease-in-out;
   -webkit-transition: all 0.3s ease-in-out;
 }
-/* line 464, ../compass/sass/_styles.scss */
+/* line 498, ../compass/sass/_styles.scss */
 #main #mid-section-2 ul .expand h4 {
   float: left;
-  width: 86%;
+  width: 85%;
 }
-/* line 469, ../compass/sass/_styles.scss */
+@media (max-width: 600px) {
+  /* line 498, ../compass/sass/_styles.scss */
+  #main #mid-section-2 ul .expand h4 {
+    font-size: 16px;
+    margin-top: -5px;
+  }
+}
+/* line 508, ../compass/sass/_styles.scss */
 #main #mid-section-2 ul .expand .faq-arrow {
   float: right;
   width: 20px;
@@ -718,13 +773,19 @@ button:hover {
   -o-transition: all 0.3s ease-in-out;
   -webkit-transition: all 0.3s ease-in-out;
 }
-/* line 478, ../compass/sass/_styles.scss */
+@media (max-width: 600px) {
+  /* line 508, ../compass/sass/_styles.scss */
+  #main #mid-section-2 ul .expand .faq-arrow {
+    margin-top: -8px;
+  }
+}
+/* line 520, ../compass/sass/_styles.scss */
 #main #mid-section-2 ul .expand .faq-arrow.rotate0 {
   -ms-transform: rotate(0deg);
   -webkit-transform: rotate(0deg);
   transform: rotate(0deg);
 }
-/* line 482, ../compass/sass/_styles.scss */
+/* line 524, ../compass/sass/_styles.scss */
 #main #mid-section-2 ul .expand .faq-arrow.rotate90 {
   padding-right: 20px;
   padding-top: 20px;
@@ -732,7 +793,7 @@ button:hover {
   -webkit-transform: rotate(90deg);
   transform: rotate(90deg);
 }
-/* line 488, ../compass/sass/_styles.scss */
+/* line 530, ../compass/sass/_styles.scss */
 #main #mid-section-2 ul .expand p {
   float: left;
   margin-top: 10px;
@@ -740,20 +801,58 @@ button:hover {
   line-height: 1.4;
   width: 90%;
 }
-/* line 498, ../compass/sass/_styles.scss */
+@media (max-width: 600px) {
+  /* line 530, ../compass/sass/_styles.scss */
+  #main #mid-section-2 ul .expand p {
+    margin-top: 4px;
+  }
+}
+/* line 544, ../compass/sass/_styles.scss */
 #main #mid-section-2 ul .expanded {
   -moz-transition: all 0.3s ease-in-out;
   -ms-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
   -webkit-transition: all 0.3s ease-in-out;
 }
-@media (max-width: 870px) {
-  /* line 503, ../compass/sass/_styles.scss */
-  #main #mid-section-2 #expander3 {
-    height: 40px;
+@media (max-width: 600px) {
+  /* line 549, ../compass/sass/_styles.scss */
+  #main #mid-section-2 #expander1, #main #mid-section-2 #expander2, #main #mid-section-2 #expander4 {
+    height: 10px;
   }
 }
-/* line 510, ../compass/sass/_styles.scss */
+@media (max-width: 870px) {
+  /* line 555, ../compass/sass/_styles.scss */
+  #main #mid-section-2 #expander3 {
+    height: 20px;
+  }
+}
+@media (max-width: 400px) {
+  /* line 555, ../compass/sass/_styles.scss */
+  #main #mid-section-2 #expander3 {
+    height: 35px;
+  }
+}
+@media (max-width: 870px) {
+  /* line 564, ../compass/sass/_styles.scss */
+  #main #mid-section-2 #expander3 h4 {
+    font-size: 16px;
+    height: 20px;
+  }
+}
+@media (max-width: 600px) {
+  /* line 564, ../compass/sass/_styles.scss */
+  #main #mid-section-2 #expander3 h4 {
+    margin-top: -8px;
+    height: 46px;
+  }
+}
+@media (max-width: 400px) {
+  /* line 564, ../compass/sass/_styles.scss */
+  #main #mid-section-2 #expander3 h4 {
+    height: 45px;
+  }
+}
+/* line 584, ../compass/sass/_styles.scss */
 #main #bottom-section {
   float: left;
   margin: 0 -9999px;
@@ -761,27 +860,40 @@ button:hover {
   background-color: #f5f2ea;
   width: 100%;
 }
-/* line 518, ../compass/sass/_styles.scss */
+/* line 592, ../compass/sass/_styles.scss */
 #main #bottom-section div {
   float: left;
   width: 41%;
 }
-/* line 521, ../compass/sass/_styles.scss */
+/* line 595, ../compass/sass/_styles.scss */
 #main #bottom-section div h3 {
   margin-top: 30px;
   margin-bottom: 20px;
 }
 @media (max-width: 600px) {
-  /* line 521, ../compass/sass/_styles.scss */
+  /* line 595, ../compass/sass/_styles.scss */
   #main #bottom-section div h3 {
     margin-bottom: 10px;
   }
 }
-/* line 530, ../compass/sass/_styles.scss */
+@media (max-width: 400px) {
+  /* line 595, ../compass/sass/_styles.scss */
+  #main #bottom-section div h3 {
+    font-size: 25px;
+  }
+}
+/* line 608, ../compass/sass/_styles.scss */
 #main #bottom-section div h5 {
   line-height: 2.2;
 }
-/* line 535, ../compass/sass/_styles.scss */
+@media (max-width: 400px) {
+  /* line 608, ../compass/sass/_styles.scss */
+  #main #bottom-section div h5 {
+    font-size: 13px;
+    line-height: 1.6;
+  }
+}
+/* line 618, ../compass/sass/_styles.scss */
 #main #bottom-section img {
   float: right;
   margin-top: 37px;
@@ -790,12 +902,12 @@ button:hover {
   margin-bottom: 40px;
 }
 @media (max-width: 600px) {
-  /* line 535, ../compass/sass/_styles.scss */
+  /* line 618, ../compass/sass/_styles.scss */
   #main #bottom-section img {
     margin-bottom: 80px;
   }
 }
-/* line 548, ../compass/sass/_styles.scss */
+/* line 631, ../compass/sass/_styles.scss */
 #main footer {
   padding: 25px 0;
 }
