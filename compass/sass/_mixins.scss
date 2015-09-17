@@ -1,0 +1,74 @@
+// ---------- MIXINS ----------
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  border-radius: $radius;
+}
+
+@mixin opacity($opacity) {
+  opacity: $opacity;
+  $opacity-ie: $opacity * 100;
+  filter: alpha(opacity=$opacity-ie); //IE8
+}
+
+@mixin box-shadow($top, $left, $blur, $spread, $color) {
+  -moz-box-shadow: $top $left $blur $spread $color;
+  -webkit-box-shadow: $top $left $blur $spread $color;
+  box-shadow: $top $left $blur $spread $color;
+}
+
+@mixin gradient($pos, $startColor, $endColor) {
+  background-image: -webkit-linear-gradient($pos, $startColor, $endColor);
+  background-image: -moz-linear-gradient($pos, $startColor, $endColor);
+  background-image: -ms-linear-gradient($pos, $startColor, $endColor);
+  background-image: -o-linear-gradient($pos, $startColor, $endColor);
+}
+
+@mixin box-sizing($border-style) {
+  -webkit-box-sizing: $border-style;
+  -moz-box-sizing: $border-style;
+  box-sizing: $border-style;
+}
+
+@mixin transform-rotate($degree) {
+  -ms-transform: rotate($degree);
+  -webkit-transform: rotate($degree);
+  transform: rotate($degree);
+}
+
+@mixin transition($type, $duration, $easing) {
+  -moz-transition: $type $duration $easing;
+  -ms-transition: $type $duration $easing;
+  -o-transition: $type $duration $easing;
+  -webkit-transition: $type $duration $easing;
+}
+
+%clearfix {
+  *zoom: 1;
+  &:before, &:after {
+    content: " ";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+@mixin bp($point) {
+  @if $point == laptop {
+    @media (max-width: 1600px) { @content; }
+  }
+  @else if $point == tablet {
+    @media (max-width: 1056px) { @content; }
+  }
+
+  //I added this one to help with the width of the text on the FAQ section
+  @else if $point == betweentp {
+    @media (max-width: 870px) { @content; }
+  }
+
+  @else if $point == phone {
+    @media (max-width: 600px)  { @content; }
+  }
+}

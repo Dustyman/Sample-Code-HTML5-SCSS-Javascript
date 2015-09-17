@@ -1,0 +1,62 @@
+// ----- SETUP GENERALS -----
+h1, h3, figcaption {
+  font-family: $georgia;
+  font-weight: 100;
+  font-size: 44px;
+  color: $red;
+}
+
+h2, h4, h5, h6, p, a, button {
+  font-family: $helvetica;
+  color: $grey-text;
+  font-weight: 400;
+  font-size: 20px
+}
+
+h4, h5 {
+  color: $blue-links;
+}
+
+h2 {
+  padding: 15px 0;
+}
+
+h3 {
+  font-size: 32px;
+}
+
+h5 {
+  font-size: 14px;
+}
+
+h6 {
+  font-size: 14px;
+  font-weight: 100;
+}
+
+figcaption, .hero-sub-head {
+  color: $white;
+}
+
+button {
+  background: $button-grad1;
+  @include gradient(top, $button-grad1, $button-grad2);
+  @include border-radius(4px);
+  font-family: $helvetica;
+  color: $white;
+  font-size: 14px;
+  padding: 10px 20px 10px 20px;
+  border: solid $button-grad2 1px;
+  text-decoration: none;
+  cursor: pointer;
+
+  @include bp(phone) {
+    font-size: 12px;
+  }
+
+  &:hover {
+    background: $button-hover1;
+    @include gradient(top, $button-hover1, $button-hover2);
+    text-decoration: none;
+  }
+}

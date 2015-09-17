@@ -1,5 +1,3 @@
-// http://codepen.io/ Great place to test bits of code
-
 //Make sure the page is loaded before running any js
 $( document ).ready(function() {
     setup();
