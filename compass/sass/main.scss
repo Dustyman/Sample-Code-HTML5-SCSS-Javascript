@@ -1,6 +1,17 @@
+//additional compass functionality
 @import 'compass/css3';
-@import 'reset';
+
+//normalize tags
+@import 'reset'; 
+
+//variables fonts and colors
 @import 'variables';
+
+//mixins
 @import 'mixins';
+
+//general styles
 @import 'general';
+
+//all page styles
 @import 'styles';

@@ -2,7 +2,7 @@ Front-end Developer Sample
 
 --------------------------------------------------------
 
-Using the test1.jpg as my template I created this site. As for the design for the responsiveness, I took my own liberties.
+Using the test1.jpg as my template I created this site. I approached the responsive code with my own custom breakpoint system.
 
 
 
