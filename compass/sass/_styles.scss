@@ -1,8 +1,13 @@
+.main-container {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
 #main {
   margin: 50px auto;
   width: 98%;
   max-width: 1015px;
-  overflow-x: hidden;
+  //overflow-x: hidden;
 
 
   @include bp(tablet) {
