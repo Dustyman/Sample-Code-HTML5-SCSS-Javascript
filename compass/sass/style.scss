@@ -1,0 +1,724 @@
+@import 'compass/css3';
+@import 'reset';
+
+// ---------- VARIABLES ----------
+// ---- FONTS ----
+$georgia: Georgia, serif;
+$helvetica: Helvetica, sans-serif;
+
+// ---- COLORS ----
+$white: #ffffff;
+$black: #000000;
+$red: #e03031;
+$grey-text: #5a5a5a;
+$button-grad1: #24b7f3;
+$button-grad2: #1885a6;
+$button-hover1: #3cb0fd;
+$button-hover2: #3498db;
+$tan-bg: #f5f2ea;
+$blue-links: #05a6cc;
+$menu-background: #e3e3e2;
+$menu-foreground: #989898;
+$faq-background: #eeeeee;
+
+// ---------- END VARIABLES ----------
+
+// ---------- MIXINS ----------
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  border-radius: $radius;
+}
+
+@mixin opacity($opacity) {
+  opacity: $opacity;
+  $opacity-ie: $opacity * 100;
+  filter: alpha(opacity=$opacity-ie); //IE8
+}
+
+@mixin box-shadow($top, $left, $blur, $spread, $color) {
+  -moz-box-shadow:    $top $left $blur $spread $color;
+  -webkit-box-shadow: $top $left $blur $spread $color;
+  box-shadow:         $top $left $blur $spread $color;
+}
+
+%clearfix {
+  *zoom: 1;
+  &:before, &:after {
+    content: " ";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+@mixin bp($point) {
+  @if $point == laptop {
+    @media (max-width: 1600px) { @content; }
+  }
+  @else if $point == tablet {
+    @media (max-width: 1056px) { @content; }
+  }
+
+  @else if $point == betweentp {
+    @media (max-width: 870px) { @content; }
+  }
+
+  @else if $point == phone {
+    @media (max-width: 600px)  { @content; }
+  }
+}
+
+// ---------- END MIXINS ----------
+
+// ----- SETUP GENERALS -----
+h1, h3, figcaption {
+  font-family: $georgia;
+  font-weight: 100;
+  font-size: 44px;
+  color: $red;
+}
+
+h2, h4, h5, h6, p, a, button {
+  font-family: $helvetica;
+  color: $grey-text;
+  font-weight: 400;
+  font-size: 20px
+}
+
+h4, h5 {
+  color: $blue-links;
+}
+
+h2 {
+  padding: 15px 0;
+}
+
+h3 {
+  font-size: 32px;
+}
+
+h5 {
+  font-size: 14px;
+}
+
+h6 {
+  font-size: 14px;
+  font-weight: 100;
+}
+
+figcaption, .hero-sub-head {
+  color: $white;
+}
+
+button {
+  background: $button-grad1;
+  background-image: -webkit-linear-gradient(top, $button-grad1, $button-grad2);
+  background-image: -moz-linear-gradient(top, $button-grad1, $button-grad2);
+  background-image: -ms-linear-gradient(top, $button-grad1, $button-grad2);
+  background-image: -o-linear-gradient(top, $button-grad1, $button-grad2);
+  background-image: linear-gradient(to bottom, $button-grad1, $button-grad2);
+  @include border-radius(4px);
+  font-family: $helvetica;
+  color: $white;
+  font-size: 14px;
+  padding: 10px 20px 10px 20px;
+  border: solid $button-grad2 1px;
+  text-decoration: none;
+  cursor: pointer;
+
+  @include bp(phone) {
+    font-size: 12px;
+  }
+
+  &:hover {
+    background: $button-hover1;
+    background-image: -webkit-linear-gradient(top, $button-hover1, $button-hover2);
+    background-image: -moz-linear-gradient(top, $button-hover1, $button-hover2);
+    background-image: -ms-linear-gradient(top, $button-hover1, $button-hover2);
+    background-image: -o-linear-gradient(top, $button-hover1, $button-hover2);
+    background-image: linear-gradient(to bottom, $button-hover1, $button-hover2);
+    text-decoration: none;
+  }
+}
+
+// ----- END SETUP GENERALS -----
+
+#main {
+  margin: 50px auto;
+  width: 98%;
+  max-width: 1015px;
+
+  #top-section {
+    figure img {
+      width: 100%;
+    }
+
+    figcaption {
+      font-size: 38px;
+      text-shadow: 0px 0px 5px #000000;
+
+      @include bp(tablet) {
+        font-size: 28px;
+      }
+
+      @include bp(phone) {
+        font-size: 22px;
+      }
+    }
+
+    .hero-sub-head {
+      font-size: 16px;
+      margin: 15px 0 35px 0;
+      text-shadow: 0px 0px 5px #000000;
+
+      @include bp(tablet) {
+        font-size: 15px;
+      }
+
+      @include bp(phone) {
+        font-size: 12px;
+        margin: 15px 0 16px 0;
+      }
+    }
+  }
+
+  .hero-image {
+    margin: 0;
+  }
+
+  .hero-text {
+    position: absolute;
+    top: 250px;
+    padding-left: 100px;
+    max-width: 332px;
+
+    @include bp(tablet) {
+      top: 200px;
+      padding-left: 50px;
+      max-width: 260px;
+    }
+
+    @include bp(phone) {
+      top: 170px;
+      padding-left: 25px;
+      max-width: 200px;
+    }
+  }
+
+  nav {
+    height: 140px;
+
+    @include bp(tablet) {
+      width: 100%;
+    }
+
+    ul li a {
+      float: left;
+      font-size: 16px;
+      background-color: $menu-background;
+      text-decoration: none;
+      margin: 40px 2% 40px 0;
+      height: 60px;
+
+      @include bp(tablet) {
+        width: 49%;
+        margin: 20px 2% 20px 0;
+      }
+
+      @include bp(phone) {
+        width: 100%;
+      }
+
+      span {
+        float: left;
+        width: 104px;
+        margin: 15px 20px 0 20px;
+      }
+
+      img {
+        width: 62px;
+        color: $grey-text;
+        @include opacity(0.3);
+        margin-left: 15px;
+        float: left;
+      }
+
+      .right-arrow {
+        width: 12px;
+        margin: 25px 15px 0 0;
+
+        @include bp(tablet) {
+          float: right;
+        }
+      }
+    }
+
+    .enjoy-nature {
+      @include bp(tablet) {
+        float: right;
+        margin-right: 0;
+      }
+
+      @include bp(phone) {
+        margin-top: 0;
+      }
+
+      .icon {
+        width: 52px;
+        margin-top: 4px;
+      }
+
+      span {
+        margin-top: 23px;
+      }
+    }  
+
+    .share-photos {
+      @include bp(tablet) {
+        margin-top: 0;
+      }
+
+      .icon {
+        width: 48px;
+        margin-top: 7px;
+      }
+    }  
+
+    .find-a-temple {
+      margin-right: 0;
+      float: right;
+
+      @include bp(tablet) {
+        margin-top: 0;
+      }
+
+      .icon {
+        width: 48px;
+        margin-top: 6px;
+      }
+    }
+  }
+
+  #mid-section {
+    @extend %clearfix;
+    float: left;
+    margin: 0 -9999rem;
+    padding: 0.25rem 9999rem;
+    background-color: $tan-bg;
+
+    h3 {
+      margin: 4px 0 17px 0;
+    }
+
+    p {
+      line-height: 1.4;
+      margin-bottom: 50px;
+
+      @include bp(tablet) {
+        margin-bottom: 22px;
+      }
+    }
+
+    button {
+      @include bp(tablet) {
+        width: 170px;
+      }
+
+      @include bp(phone) {
+        width: 48%;
+        margin-top: 23px;
+      }
+    }
+
+    .article1 {
+      @extend %clearfix;
+      margin-top: 30px;
+      float: left;
+      width: 52%;
+      margin-right: 4%;
+
+      @include bp(tablet) {
+        //float: right;
+        width: 100%;
+        margin-right: 0;
+        float: none;
+      }
+
+      .text {
+        @include bp(tablet) {
+          float: left;
+          width: 64%;
+        }
+
+        @include bp(phone) {
+          width: 100%;
+        }
+      }
+
+      .visuals {
+        @include bp(tablet) {
+          float: right;
+          width: 23%;
+          margin-right: 6%;
+        }
+
+        @include bp(phone) {
+          float: none;
+          width: 100%;
+        }
+      }
+    }
+
+    .art-img {
+      margin-top: 30px;
+      float: right;
+      @include box-shadow(2px, 1px, 5px, 1px, $grey-text);
+
+      @include bp(tablet) {
+        float: none;
+        width: 99.5%;
+        margin-top: 0;
+      }
+
+      img {
+        margin: 4px 0 0 4px;
+        @include box-shadow(0, 0, 0, 4px, $white);
+
+        @include bp(tablet) {
+          width: 99.5%;
+        }
+      }
+    }
+
+    .thumb {
+      background: url("../images/thumb1.jpg") no-repeat center top;
+      width: 170px;
+      height: 86px;
+      float: left;
+      margin: 0 20px 100px 0;
+
+      @include bp(tablet) {
+        margin: 0 20px 30px 0;
+      }
+
+      img {
+        @include opacity(0.6);
+        width: 39px;
+        float: left;
+        margin: 0 20px 120px 0;
+        position: relative;
+        top: 25px;
+        left: 67px;
+      }
+    }
+
+    button {
+      float: left;
+    }
+
+    .art2 {
+      @extend %clearfix;
+      float: left;
+
+      .article2 {
+        float: right;
+        width: 52%;
+
+        @include bp(tablet) {
+          float: none;
+          width: 99.5%;
+          margin-top: 30px;
+        }
+
+        .text {
+          @include bp(tablet) {
+            float: left;
+            width: 64%;
+          }
+
+          @include bp(phone) {
+            width: 100%;
+          }
+        }
+
+        .visuals {
+          @include bp(tablet) {
+            float: right;
+            width: 23%;
+            margin-right: 6%;
+          }
+
+          @include bp(phone) {
+            float: none;
+            width: 100%;
+          }
+        }
+      }
+
+      .stack {
+        float: left;
+        position: relative;
+        z-index: 10;
+        margin-top: 20px;
+
+        @include bp(tablet) {
+          width: 99.5%;
+        }
+
+        img { max-width: 100%; height: auto; vertical-align: bottom; border: 10px solid #fff; border-radius: 3px;
+          -webkit-box-sizing: border-box;
+          -moz-box-sizing: border-box;
+          box-sizing: border-box;
+          -webkit-box-shadow: 0px 0px 11px 0px rgba(0, 0, 0, 0.4);
+          -moz-box-shadow: 0px 0px 11px 0px rgba(0, 0, 0, 0.4);
+          box-shadow: 0px 0px 11px 0px rgba(0, 0, 0, 0.4);
+          -ms-transform: rotate(4deg); /* IE 9 */
+          -webkit-transform: rotate(4deg); /* Chrome, Safari, Opera */
+          transform: rotate(4deg);
+
+          @include bp(tablet) {
+            @include box-shadow(0, 0, 0, 4px, $white);
+            width: 100%;
+            -webkit-box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0);
+            -moz-box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0);
+            box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0);
+            -ms-transform: rotate(0deg); /* IE 9 */
+            -webkit-transform: rotate(0deg); /* Chrome, Safari, Opera */
+            transform: rotate(0deg);
+          }
+        }
+
+        &:before { content: ""; border-radius: 3px; width: 100%; height: 100%; position: absolute; border: 10px solid #fff; left: 0;
+          -webkit-box-sizing: border-box;
+          -moz-box-sizing: border-box;
+          box-sizing: border-box;
+          -webkit-box-shadow: 0px 0px 11px 0px rgba(0, 0, 0, 0.4);
+          -moz-box-shadow: 0px 0px 11px 0px rgba(0, 0, 0, 0.4);
+          box-shadow: 0px 0px 11px 0px rgba(0, 0, 0, 0.4);
+          -webkit-transition: 0.3s all ease-out;
+          -moz-transition: 0.3s all ease-out;
+          transition: 0.3s all ease-out;
+          -ms-transform: rotate(-4deg); /* IE 9 */
+          -webkit-transform: rotate(-4deg); /* Chrome, Safari, Opera */
+          transform: rotate(-4deg);
+
+          @include bp(tablet) {
+            content: none;
+          }
+        }
+        
+        &:before {
+          top: 4px; z-index: -10;
+
+          @include bp(tablet) {
+            content: none;
+          }
+        }
+      }
+
+      .thumb {
+        background: url("../images/thumb2.jpg") no-repeat center top;
+        position: relative;
+        left: 13.5%;
+
+        @include bp(tablet) {
+          position: inherit;
+          left: 0;
+        }
+      }
+
+      button {
+        position: relative;
+        left: 13.5%;
+
+        @include bp(tablet) {
+          position: inherit;
+          left: 0;
+        }
+      }
+    }
+
+    .art3 {
+      @extend %clearfix;
+      float: left;
+
+      @include bp(tablet) {
+        margin-bottom: 20px;
+      }
+      .art-img {
+        @include bp(tablet) {
+          float: left;
+          width: 99.5%;
+          margin-top: 0;
+        }
+      }
+
+      .article3 {
+        width: 52%;
+        float: left;
+        
+        @include bp(tablet) {
+          width: 99.5%;
+          margin-top: 30px;
+        }
+
+        .text {
+          @include bp(tablet) {
+            float: left;
+            width: 64%;
+          }
+
+          @include bp(phone) {
+            width: 100%;
+          }
+        }
+
+        .visuals {
+          @include bp(tablet) {
+            float: right;
+            width: 23%;
+            margin-right: 6%;
+          }
+
+          @include bp(phone) {
+            float: none;
+            width: 100%;
+          }
+        }
+      }
+
+      .thumb {
+        background: url("../images/thumb3.jpg") no-repeat center top;
+      }
+    }
+  }
+
+  #mid-section-2 {
+    @extend %clearfix;
+    float: left;
+    margin-top: 30px;
+    margin-bottom: 45px;
+
+    ul {
+
+      .expand {
+        cursor: pointer;
+        margin-top: 15px;
+        padding: 16px 0 10px 15px;
+        background: $faq-background;
+        overflow: hidden;
+        height: 20px;
+
+        -moz-transition: all 1s ease-in-out;
+        -ms-transition: all 1s ease-in-out;
+        -o-transition: all 1s ease-in-out;
+        -webkit-transition: all 1s ease-in-out;
+        transition: all .3s;
+
+        h4 {
+          float: left;
+          width: 86%;
+        }
+
+        .faq-arrow {
+          float: right;
+          width: 20px;
+          padding-right: 15px;
+          @include opacity(0.4);
+
+          -moz-transition: all 1s ease-in-out;
+          -ms-transition: all 1s ease-in-out;
+          -o-transition: all 1s ease-in-out;
+          -webkit-transition: all 1s ease-in-out;
+          transition: all .3s;          
+        }
+
+        .faq-arrow.rotate0 {
+          -ms-transform: rotate(0deg); /* IE 9 */
+          -webkit-transform: rotate(0deg); /* Safari */
+          transform: rotate(0deg);
+        }
+
+        .faq-arrow.rotate90 {
+          padding-right: 20px;
+          padding-top: 20px;
+          -ms-transform: rotate(90deg); /* IE 9 */
+          -webkit-transform: rotate(90deg); /* Safari */
+          transform: rotate(90deg);
+        }
+
+        p {
+          @extend %clearfix;
+          float: left;
+          margin-top: 10px;
+          font-size: 16px;
+          line-height: 1.4;
+          width: 90%;
+        }
+      }
+
+      .expanded {
+        -moz-transition: all 1s ease-in-out;
+        -ms-transition: all 1s ease-in-out;
+        -o-transition: all 1s ease-in-out;
+        -webkit-transition: all 1s ease-in-out;
+        transition: all .3s;
+      }
+    }
+
+    #expander3 {
+      @include bp(betweentp) {
+        height: 35px;
+      }
+      // h4 {
+      //   margin: 10px 0;
+
+      //   @include bp(betweentp) {
+      //     margin: 0 0;
+      //   }
+      // }
+
+      // .arrow {
+      //   margin-top: 10px;
+      // }
+    }
+  }
+
+  #bottom-section {
+    @extend %clearfix;
+    float: left;
+    margin: 0 -9999rem;
+    padding: 0.25rem 9999rem;
+    background-color: $tan-bg;
+    width: 100%;
+
+    div {
+      float: left;
+      width: 41%;
+      h3 {
+        margin-top: 30px;
+        margin-bottom: 20px;
+      }
+
+      h5 {
+        line-height: 2.2;
+      }
+    }
+
+    img {
+      float: right;
+      margin-top: 37px;
+      width: 51%;
+      display: block;
+      margin-bottom: 40px;
+    }
+  }
+
+  footer {
+    @extend %clearfix;
+    padding: 25px 0;
+  }
+}
