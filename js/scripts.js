@@ -7,8 +7,7 @@ $( document ).ready(function() {
 function setup() {
   $(".expand").click(function() {
     if($(this).hasClass("expanded")) {
-      //hides paragraph content
-      console.log("height "+$(this).find("h4").height());
+      //hides paragraph content had to account for many sizes based on device
       $(this).toggleClass("expanded");
       if($(this).find("h4").height() > 20) {
         if($(this).find("h4").height() > 32) {
